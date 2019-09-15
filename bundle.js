@@ -1,19 +1,23 @@
 "use strict";
 
 var usuario = {
-  nome: 'Joao'
+  nome: 'Joao',
+  idade: 29,
+  endereco: {
+    cidade: 'Valinhos',
+    estado: 'SP'
+  }
 };
 console.log(usuario);
-usuario.nome = "Alfafa";
-console.log(usuario);
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome, idade, cidade);
 
-function Teste(x) {
-  var y = 2;
-
-  if (x > 5) {
-    var _y = 89;
-    console.log(x, _y);
-  }
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
 }
 
-Teste(10);
+console.log(mostraNome(usuario));

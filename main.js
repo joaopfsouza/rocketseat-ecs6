@@ -1,16 +1,21 @@
-const usuario = {
-    nome: 'Joao'
-};
-console.log(usuario);
-usuario.nome = "Alfafa"
-console.log(usuario);
+    const usuario = {
+        nome: 'Joao',
+        idade: 29,
+        endereco:{
+            cidade:'Valinhos',
+            estado:'SP'
+        }
+    };
 
+    console.log(usuario);
 
-function Teste(x) {
-    let y = 2;
-    if (x > 5) {
-        let y = 89;
-        console.log(x, y);
-    }
-}
-Teste(10);
+    const { nome,idade, endereco:{cidade} } = usuario;
+
+    console.log(nome,idade,cidade);
+
+    function mostraNome({nome,idade}) {
+        console.log(nome,idade);
+        
+    } 
+  
+    console.log(mostraNome(usuario));
