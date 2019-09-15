@@ -1,17 +1,16 @@
-class ToDoList{
-    constructor(){
-        this.todos=[];
-    }
-    static addTodo(){
-        this.todos.push('Novo Todo');
-        console.log(this.todos);
+const usuario = {
+    nome: 'Joao'
+};
+console.log(usuario);
+usuario.nome = "Alfafa"
+console.log(usuario);
+
+
+function Teste(x) {
+    let y = 2;
+    if (x > 5) {
+        let y = 89;
+        console.log(x, y);
     }
 }
-
-class Matematica{
-    static Soma(a,b){
-        return a+b;
-    }
-}
-
-console.log(Matematica.Soma(5,3));
+Teste(10);
