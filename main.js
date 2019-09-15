@@ -1,28 +1,17 @@
-class List {
-    constructor() {
-        this.data = [];
+class ToDoList{
+    constructor(){
+        this.todos=[];
     }
-
-    add(data) {
-        this.data.push(data);
-        console.log(this.data);
-    }
-}
-
-class ToDoList extends List {
-    constructor() {
-        super();
-        this.usuario = "JoaoP";
-    }
-
-    MostraUsuario(){
-        console.log(this.usuario);
+    static addTodo(){
+        this.todos.push('Novo Todo');
+        console.log(this.todos);
     }
 }
 
-var MinhaLista = new ToDoList();
-
-document.getElementById('novotodo').onclick = function () {
-    MinhaLista.add("Novo ToDo");
-    MinhaLista.MostraUsuario();
+class Matematica{
+    static Soma(a,b){
+        return a+b;
+    }
 }
+
+console.log(Matematica.Soma(5,3));
